@@ -14,8 +14,11 @@ djoser = "*"
 djangorestframework-simplejwt = "*"
 autopep8 = "*"
 pillow = "*"
+flower = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.9"
