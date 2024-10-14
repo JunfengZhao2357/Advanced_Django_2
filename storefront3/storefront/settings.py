@@ -189,3 +189,16 @@ CELERY_BEAT_SCHEDULE = {
         'args': ['Hello World'],
     }
 }
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        # redis database 1 is used by celery so here we used 2
+        'LOCATION': 'redis://127.0.0.1:6379/2',
+        # after 10 mins, the cache will be deleted
+        'TIMEOUT': 10 * 60,
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}

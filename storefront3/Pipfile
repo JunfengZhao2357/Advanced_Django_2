@@ -15,6 +15,7 @@ djangorestframework-simplejwt = "*"
 autopep8 = "*"
 pillow = "*"
 flower = "*"
+django-redis = "*"
 
 [dev-packages]
 pytest = "*"
